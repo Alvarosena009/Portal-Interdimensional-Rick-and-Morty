@@ -31,14 +31,6 @@ galeria_rick_and_morty/
     └── script.js
 ```
 
-## Publicar no GitHub Pages
-1. Entre em https://github.com e crie um repositório público, por exemplo `portal-interdimensional`.
-2. Envie os arquivos e pastas deste projeto para a raiz do repositório (o `index.html` deve ficar na raiz).
-3. No repositório, acesse **Settings → Pages**.
-4. Em **Build and deployment**, selecione **Deploy from a branch**.
-5. Escolha a branch `main` e a pasta `/ (root)`, depois clique em **Save**.
-6. Aguarde a publicação. O GitHub exibirá o endereço do site na mesma tela.
-
 ## API utilizada
 Rick and Morty API — https://rickandmortyapi.com/api/character
 
