@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore personagens do universo Rick and Morty usando dados da API pública.">
+  <title>Portal Interdimensional | Rick and Morty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Portal Interdimensional - início">
+      <span class="brand-mark">P<span>✦</span></span>
+      <span>PORTAL<span class="brand-light"> INTERDIMENSIONAL</span></span>
+    </a>
+    <span class="api-label"><span class="pulse"></span> API CONECTADA</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">ARQUIVO MULTIVERSAL Nº 001</p>
+        <h1>O MULTIVERSO<br><span>ESTÁ AQUI.</span></h1>
+        <p class="hero-copy">Acesse o banco de dados interdimensional e descubra os personagens mais inusitados de Rick and Morty.</p>
+        <a class="hero-button" href="#explorar">EXPLORAR PERSONAGENS <span>↓</span></a>
+      </div>
+      <div class="portal-art" aria-hidden="true">
+        <div class="portal-ring ring-one"></div>
+        <div class="portal-ring ring-two"></div>
+        <div class="portal-core"></div>
+        <span class="portal-star star-one">✦</span>
+        <span class="portal-star star-two">✧</span>
+        <span class="portal-star star-three">·</span>
+        <span class="portal-code">C-137<br>DIMENSION</span>
+      </div>
+      <div class="hero-bottom"><span>REALIDADE É RELATIVA</span><span>SCROLL PARA EXPLORAR ↓</span></div>
+    </section>
+
+    <section class="intro-strip" aria-label="Sobre o projeto">
+      <div><strong>100% DINÂMICO</strong><span>Cards gerados com JavaScript</span></div>
+      <div><strong>API PÚBLICA</strong><span>Rick and Morty API</span></div>
+      <div><strong>SEM FRAMEWORKS</strong><span>HTML, CSS e Fetch API</span></div>
+    </section>
+
+    <section class="explorer section-wrap" id="explorar">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BANCO DE DADOS // PERSONAGENS</p>
+          <h2>Explore o <span>arquivo</span></h2>
+        </div>
+        <p class="section-note">Informações carregadas diretamente da API.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="searchInput" placeholder="Buscar personagem..." autocomplete="off">
+        </label>
+        <label class="filter-box">
+          <span class="sr-only">Filtrar por status</span>
+          <select id="statusFilter">
+            <option value="all">Todos os status</option>
+            <option value="Alive">Vivo</option>
+            <option value="Dead">Morto</option>
+            <option value="unknown">Desconhecido</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="results-line">
+        <span id="resultsText">Preparando consulta...</span>
+        <span class="api-source">FONTE: rickandmortyapi.com</span>
+      </div>
+
+      <div id="characterGrid" class="character-grid" aria-live="polite">
+        <!-- Os cards são inseridos dinamicamente pelo JavaScript. -->
+      </div>
+
+      <div id="loading" class="feedback">
+        <span class="loader"></span>
+        <p>Conectando ao multiverso...</p>
+      </div>
+      <div id="errorMessage" class="feedback error hidden" role="alert">
+        <p>Não foi possível acessar a dimensão agora.</p>
+        <button id="retryButton" class="outline-button">Tentar novamente</button>
+      </div>
+      <div id="emptyMessage" class="feedback hidden">
+        <p>Nenhum personagem encontrado com esses filtros.</p>
+      </div>
+
+      <nav class="pagination" aria-label="Paginação dos personagens">
+        <button id="prevButton" class="page-button" disabled>← ANTERIOR</button>
+        <span id="pageInfo">PÁGINA 1</span>
+        <button id="nextButton" class="page-button">PRÓXIMA →</button>
+      </nav>
+    </section>
+
+    <section class="about">
+      <div class="about-symbol">R<span>&</span>M</div>
+      <div>
+        <p class="eyebrow">SOBRE A EXPERIÊNCIA</p>
+        <h2>Uma viagem por infinitas possibilidades.</h2>
+        <p>Rick and Morty acompanha as aventuras de um cientista brilhante e instável e seu neto. Neste projeto acadêmico, os dados dos personagens são consultados em uma API pública e apresentados em cards criados automaticamente pelo JavaScript.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">P<span>✦</span></span><span>PORTAL<span class="brand-light"> INTERDIMENSIONAL</span></span></a>
+    <p>Projeto acadêmico • Desenvolvido com HTML, CSS e JavaScript</p>
+    <a href="https://rickandmortyapi.com/documentation" target="_blank" rel="noopener noreferrer">DOCUMENTAÇÃO DA API ↗</a>
+  </footer>
+</body>
+</html>
